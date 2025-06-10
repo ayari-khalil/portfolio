@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "title": "IT Engineering Student",
+    "subtitle": "Passionate about Web Technologies, Fullstack Development, AI & Cybersecurity",
+    "cta": "Explore My Lab"
+  },
+  "about": {
+    "title": "About Me",
+    "education": "Education",
+    "esprit": "IT Engineering Student at ESPRIT",
+    "bio": "I'm a passionate IT engineering student at ESPRIT with a focus on web technologies, fullstack development, artificial intelligence, and cybersecurity. I'm sociable, ambitious, and energetic - I thrive in team environments and enjoy tackling new challenges.",
+    "personal": "I love turning complex problems into elegant solutions through code.",
+    "interests": "Technical Interests"
+  },
+  "projects": {
+    "title": "Projects",
+    "insuranceApp": {
+      "title": "Insurance Mail Management",
+      "description": "Web application for managing insurance correspondence built with Spring Boot & Angular.",
+      "tech": "Spring Boot, Angular, MySQL"
+    },
+    "chatApp": {
+      "title": "Real-time Chat Application",
+      "description": "Interactive chat platform with real-time messaging capabilities.",
+      "tech": "React, Node.js, Socket.io"
+    },
+    "quizAI": {
+      "title": "AI-powered Interactive Quiz",
+      "description": "Smart quiz platform with AI-generated questions and adaptive difficulty.",
+      "tech": "Python, TensorFlow, React"
+    },
+    "skillExchange": {
+      "title": "SkillExchange Platform",
+      "description": "Skill recommendation platform connecting people based on complementary skills.",
+      "tech": "MongoDB, Spring Boot, React"
+    }
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "databases": "Databases",
+    "tools": "Tools & Platforms"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Message sent successfully!",
+    "error": "There was an error sending your message. Please try again."
+  }
+}

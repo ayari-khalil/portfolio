@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Bonjour, je suis",
+    "title": "Étudiant en Ingénierie Informatique",
+    "subtitle": "Passionné par les Technologies Web, le Développement Fullstack, l'IA & la Cybersécurité",
+    "cta": "Explorez Mon Laboratoire"
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "education": "Formation",
+    "esprit": "Étudiant en Ingénierie Informatique à ESPRIT",
+    "bio": "Je suis un étudiant passionné en ingénierie informatique à ESPRIT, avec un intérêt particulier pour les technologies web, le développement fullstack, l'intelligence artificielle et la cybersécurité. Je suis sociable, ambitieux et énergique - j'apprécie le travail en équipe et j'aime relever de nouveaux défis.",
+    "personal": "J'aime transformer des problèmes complexes en solutions élégantes grâce au code.",
+    "interests": "Intérêts Techniques"
+  },
+  "projects": {
+    "title": "Projets",
+    "insuranceApp": {
+      "title": "Gestion de Courrier Assurance",
+      "description": "Application web de gestion de correspondance d'assurance construite avec Spring Boot & Angular.",
+      "tech": "Spring Boot, Angular, MySQL"
+    },
+    "chatApp": {
+      "title": "Application de Chat en Temps Réel",
+      "description": "Plateforme de chat interactive avec messagerie en temps réel.",
+      "tech": "React, Node.js, Socket.io"
+    },
+    "quizAI": {
+      "title": "Quiz Interactif avec IA",
+      "description": "Plateforme de quiz intelligente avec questions générées par IA et difficulté adaptative.",
+      "tech": "Python, TensorFlow, React"
+    },
+    "skillExchange": {
+      "title": "Plateforme SkillExchange",
+      "description": "Plateforme de recommandation de compétences connectant les personnes selon leurs compétences complémentaires.",
+      "tech": "MongoDB, Spring Boot, React"
+    }
+  },
+  "skills": {
+    "title": "Compétences Techniques",
+    "languages": "Langages",
+    "frameworks": "Frameworks",
+    "databases": "Bases de Données",
+    "tools": "Outils & Plateformes"
+  },
+  "contact": {
+    "title": "Contactez-Moi",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer le Message",
+    "success": "Message envoyé avec succès !",
+    "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+  }
+}
