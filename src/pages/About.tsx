@@ -1,27 +1,21 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTranslation } from 'react-i18next';
 import { Book, Code, Server, Cpu, Shield, Users, Coffee, Zap } from 'lucide-react';
 
 const About: React.FC = () => {
-  const { t } = useTranslation();
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
   useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
+    if (inView) controls.start('visible');
   }, [controls, inView]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+      transition: { staggerChildren: 0.1 }
     }
   };
 
@@ -30,54 +24,76 @@ const About: React.FC = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: 'easeOut' }
     }
   };
 
   const timelineItems = [
     {
-      year: '2023 - Present',
-      title: 'IT Engineering Student',
+      year: '2024 - 2025',
+      title: 'Advanced University Projects',
       institution: 'ESPRIT',
-      description: 'Specialized in web technologies, fullstack development, AI, and cybersecurity.'
+      description:
+        'Web distributed systems, microservices architecture, DevOps pipelines, ML recommendation system, cybersecurity workshops (pfSense, Snort, VPN), and Big Data ecosystem.'
+    },
+    {
+      year: '2023 - Present',
+      title: 'Engineering Student in Computer Science',
+      institution: 'ESPRIT',
+      description:
+        'Focused on full-stack web development, REST APIs, cloud technologies, microservices, machine learning, and software architecture.'
     },
     {
       year: '2022 - 2023',
       title: 'Web Development Internship',
       institution: 'Tech Company',
-      description: 'Developed responsive web applications using modern JavaScript frameworks.'
+      description:
+        'Developed responsive interfaces, integrated backend APIs, improved UI/UX, collaborated using Agile and Git workflow.'
     },
     {
       year: '2020 - 2022',
-      title: 'Computer Science Foundation',
-      institution: 'University',
-      description: 'Acquired fundamental knowledge in algorithms, data structures, and software engineering principles.'
+      title: 'Computer Science Foundations',
+      institution: 'Faculty of Sciences of Bizerte',
+      description:
+        'Strengthened fundamentals in algorithms, data structures, system design, and mathematical reasoning.'
     }
   ];
 
   const interests = [
     { icon: <Code size={24} />, name: 'Web Development' },
-    { icon: <Server size={24} />, name: 'Backend Systems' },
+    { icon: <Server size={24} />, name: 'Backend & APIs' },
     { icon: <Cpu size={24} />, name: 'Artificial Intelligence' },
     { icon: <Shield size={24} />, name: 'Cybersecurity' },
     { icon: <Users size={24} />, name: 'Team Collaboration' },
     { icon: <Coffee size={24} />, name: 'Problem Solving' },
-    { icon: <Zap size={24} />, name: 'Innovation' }
+    { icon: <Zap size={24} />, name: 'Innovation & Creativity' }
+  ];
+
+  const skills = [
+    'React / Next.js',
+    'Node.js / Express',
+    'Spring Boot',
+    'MongoDB / SQL',
+    'Docker / GitHub Actions',
+    'Python (Pandas, Scikit-learn)',
+    'Linux / Networking',
+    'UX/UI & Design Thinking'
   ];
 
   return (
     <div className="min-h-screen laboratory-section">
       <div className="container mx-auto px-4 py-16">
-        <motion.h1 
+        <motion.h1
           className="text-4xl md:text-5xl font-bold text-center mb-16 text-gradient"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {t('about.title')}
+          About Me
         </motion.h1>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Left Section */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -88,26 +104,27 @@ const About: React.FC = () => {
               <div className="w-12 h-12 rounded-full bg-primary-500/10 flex items-center justify-center mr-4">
                 <Book className="w-6 h-6 text-primary-500" />
               </div>
-              <h2 className="text-2xl font-bold">{t('about.education')}</h2>
+              <h2 className="text-2xl font-bold">Education & Background</h2>
             </div>
-            
+
             <p className="text-lg mb-6">
-              {t('about.esprit')}
+              I am an engineering student passionate about building modern applications, exploring AI, and designing secure distributed systems.
             </p>
-            
+
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              {t('about.bio')}
+              My academic path has allowed me to develop strong technical skills in full‑stack development, data engineering, machine learning, and cybersecurity.
             </p>
-            
+
             <p className="text-gray-700 dark:text-gray-300 italic border-l-4 border-primary-500 pl-4">
-              {t('about.personal')}
+              Curious, ambitious, and always learning — I am actively seeking a Final Year Internship (PFE) to contribute to innovative real‑world projects.
             </p>
-            
+
+            {/* Timeline */}
             <div className="mt-8">
               <h3 className="text-xl font-semibold mb-4">Timeline</h3>
               <div className="vertical-timeline">
                 {timelineItems.map((item, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="timeline-item"
                     initial={{ opacity: 0, x: -20 }}
@@ -125,21 +142,17 @@ const About: React.FC = () => {
               </div>
             </div>
           </motion.div>
-          
-          <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={containerVariants}
-          >
+
+          {/* Right Section */}
+          <motion.div ref={ref} initial="hidden" animate={controls} variants={containerVariants}>
             <div className="lab-card h-full">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 rounded-full bg-secondary-500/10 flex items-center justify-center mr-4">
                   <Cpu className="w-6 h-6 text-secondary-500" />
                 </div>
-                <h2 className="text-2xl font-bold">{t('about.interests')}</h2>
+                <h2 className="text-2xl font-bold">Interests</h2>
               </div>
-              
+
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {interests.map((interest, index) => (
                   <motion.div
@@ -148,64 +161,46 @@ const About: React.FC = () => {
                     variants={itemVariants}
                     whileHover={{ scale: 1.05, backgroundColor: 'rgba(0, 112, 243, 0.1)' }}
                   >
-                    <div className="text-primary-500 mb-2">
-                      {interest.icon}
-                    </div>
+                    <div className="text-primary-500 mb-2">{interest.icon}</div>
                     <span className="text-center">{interest.name}</span>
                   </motion.div>
                 ))}
               </div>
-              
-              <motion.div 
-                className="mt-8 workstation p-6 bg-gray-100 dark:bg-gray-800 rounded-lg"
-                variants={itemVariants}
-              >
+
+              {/* Skills
+              <motion.div className="mt-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg" variants={itemVariants}>
+                <h3 className="text-xl font-semibold mb-4">Technical Skills</h3>
+                <div className="grid grid-cols-2 gap-2">
+                  {skills.map((skill, i) => (
+                    <div key={i} className="px-3 py-2 bg-white dark:bg-gray-700 rounded-md shadow text-sm text-center">
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </motion.div> */}
+
+              {/* Personality */}
+              <motion.div className="mt-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg" variants={itemVariants}>
                 <h3 className="text-xl font-semibold mb-4">Personality</h3>
                 <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span>Sociable</span>
-                    <div className="w-32 h-2 bg-gray-300 dark:bg-gray-700 rounded-full">
-                      <motion.div 
-                        className="h-full bg-primary-500 rounded-full" 
-                        initial={{ width: 0 }}
-                        animate={{ width: '90%' }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                      />
+                  {[
+                    { label: 'Organized', value: '90%' },
+                    { label: 'Ambitious', value: '85%' },
+                    { label: 'Fast Learner', value: '80%' },
+                    { label: 'Team Player', value: '95%' }
+                  ].map((trait, index) => (
+                    <div className="flex justify-between items-center" key={index}>
+                      <span>{trait.label}</span>
+                      <div className="w-32 h-2 bg-gray-300 dark:bg-gray-700 rounded-full ml-4">
+                        <motion.div
+                          className="h-full bg-primary-500 rounded-full"
+                          initial={{ width: 0 }}
+                          animate={{ width: trait.value }}
+                          transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Ambitious</span>
-                    <div className="w-32 h-2 bg-gray-300 dark:bg-gray-700 rounded-full">
-                      <motion.div 
-                        className="h-full bg-primary-500 rounded-full" 
-                        initial={{ width: 0 }}
-                        animate={{ width: '85%' }}
-                        transition={{ duration: 1, delay: 0.6 }}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Energetic</span>
-                    <div className="w-32 h-2 bg-gray-300 dark:bg-gray-700 rounded-full">
-                      <motion.div 
-                        className="h-full bg-primary-500 rounded-full" 
-                        initial={{ width: 0 }}
-                        animate={{ width: '80%' }}
-                        transition={{ duration: 1, delay: 0.7 }}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Team Player</span>
-                    <div className="w-32 h-2 bg-gray-300 dark:bg-gray-700 rounded-full">
-                      <motion.div 
-                        className="h-full bg-primary-500 rounded-full" 
-                        initial={{ width: 0 }}
-                        animate={{ width: '95%' }}
-                        transition={{ duration: 1, delay: 0.8 }}
-                      />
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </motion.div>
             </div>
