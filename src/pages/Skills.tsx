@@ -44,29 +44,46 @@ const Skills: React.FC = () => {
     { name: 'JavaScript', level: 85, color: 'bg-yellow-500' },
     { name: 'TypeScript', level: 80, color: 'bg-blue-500' },
     { name: 'Python', level: 75, color: 'bg-green-500' },
+    { name: 'PHP', level: 65, color: 'bg-indigo-500' },
+    { name: 'C', level: 65, color: 'bg-gray-500' },
+    { name: 'C++', level: 60, color: 'bg-gray-600' },
     { name: 'HTML/CSS', level: 90, color: 'bg-orange-500' },
     { name: 'SQL', level: 85, color: 'bg-purple-500' }
   ];
 
   const frameworks: Skill[] = [
-    { name: 'Spring', level: 85, color: 'bg-green-500' },
+    { name: 'Spring Boot', level: 85, color: 'bg-green-500' },
     { name: 'React', level: 90, color: 'bg-blue-500' },
+    { name: 'Redux Toolkit', level: 85, color: 'bg-purple-600' },
     { name: 'Angular', level: 80, color: 'bg-red-500' },
     { name: 'Node.js', level: 85, color: 'bg-green-600' },
-    { name: 'Express', level: 80, color: 'bg-gray-600' }
+    { name: 'Express', level: 80, color: 'bg-gray-600' },
+    { name: 'Django', level: 75, color: 'bg-green-700' },
+    { name: 'Flask', level: 70, color: 'bg-blue-600' },
+    { name: 'Bootstrap', level: 80, color: 'bg-pink-500' }
   ];
 
   const databases: Skill[] = [
     { name: 'MySQL', level: 85, color: 'bg-blue-600' },
     { name: 'MongoDB', level: 90, color: 'bg-green-700' },
     { name: 'PostgreSQL', level: 75, color: 'bg-blue-500' },
+    { name: 'Oracle SQL', level: 70, color: 'bg-red-600' },
+    { name: 'Hive', level: 70, color: 'bg-yellow-600' },
+    { name: 'HBase', level: 60, color: 'bg-indigo-600' }
   ];
 
   const tools: Skill[] = [
     { name: 'Git', level: 90, color: 'bg-orange-600' },
+    { name: 'GitHub Actions', level: 70, color: 'bg-gray-700' },
     { name: 'Docker', level: 80, color: 'bg-blue-500' },
+    { name: 'Linux (Kali/Ubuntu)', level: 80, color: 'bg-green-600' },
     { name: 'CI/CD', level: 75, color: 'bg-green-500' },
     { name: 'AWS', level: 70, color: 'bg-yellow-600' },
+    { name: 'Postman', level: 85, color: 'bg-orange-500' },
+    { name: 'Figma', level: 75, color: 'bg-pink-600' },
+    { name: 'VirtualBox/VMware', level: 85, color: 'bg-gray-500' },
+    { name: 'pfSense/Snort', level: 75, color: 'bg-red-700' },
+    { name: 'Nmap/Nessus', level: 70, color: 'bg-gray-800' }
   ];
 
   const SkillBar: React.FC<{ skill: Skill, delay: number }> = ({ skill, delay }) => (

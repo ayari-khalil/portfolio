@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ExternalLink, Code, Server, Database, Monitor, Users, Brain, Tv, Globe } from 'lucide-react';
+import { ArrowRight, ExternalLink, Code, Server, Database, Monitor, Users, Brain, Tv, Globe, Sparkles, Palette } from 'lucide-react';
 
 interface Project {
   id: string;
@@ -112,6 +112,52 @@ const Projects: React.FC = () => {
         'Database optimization for large content',
         'User permission management'
       ]
+    },
+    {
+      id: 'nutrition-semantic-web',
+      title: 'Nutrition AI Semantic Web Application',
+      description: 'An intelligent nutrition and wellness recommendation system powered by AI, OWL ontologies, and SPARQL queries with natural language processing.',
+      tech: ['React', 'Python', 'Flask', 'Groq LLM', 'Apache Jena', 'OWL', 'SPARQL', 'RDFLib'],
+      icon: <Sparkles className="w-6 h-6" />,
+      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      color: 'from-emerald-500 to-cyan-600',
+      githubUrl: 'https://github.com/ayari-khalil/nutrition-semantic-web',
+      features: [
+        'Natural language to SPARQL query conversion',
+        'AI-powered using Groq LLM (Llama 3.3)',
+        'Semantic search with OWL ontologies',
+        'Real-time query execution with Jena Fuseki',
+        'Beautiful glass-morphism UI design'
+      ],
+      challenges: [
+        'NLP to SPARQL query translation',
+        'Semantic web ontology design',
+        'AI model integration and optimization',
+        'Complex SPARQL query generation'
+      ]
+    },
+    {
+      id: 'django-art-gallery',
+      title: 'Django Art Gallery',
+      description: 'A full-featured art gallery web application built with Django where users can upload artworks, browse by category and style, engage with comments and likes.',
+      tech: ['Django', 'Python', 'PostgreSQL', 'Bootstrap', 'HTML/CSS'],
+      icon: <Palette className="w-6 h-6" />,
+      image: 'https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      color: 'from-pink-500 to-rose-600',
+      githubUrl: 'https://github.com/DhiaGhouma/ArtGallery',
+      features: [
+        'Artwork upload and management',
+        'Category and style-based browsing',
+        'User commenting and interaction',
+        'Like and favorite system',
+        'User profile management'
+      ],
+      challenges: [
+        'Image upload and optimization',
+        'Efficient content categorization',
+        'User authentication and permissions',
+        'Responsive gallery design'
+      ]
     }
   ];
 
@@ -170,8 +216,6 @@ const Projects: React.FC = () => {
                 <div className="absolute top-4 right-4">
                   <a 
                     href={project.githubUrl}
-                    // href="https://github.com/ayari-khalil" 
-
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300 pointer-events-auto"
