@@ -148,7 +148,7 @@ const Home: React.FC = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <img 
-                    src="/src/uploads/khalill.jpg" 
+                    src="ayari.jpg" 
                     alt="Khalil AYARI"
                     className="w-full h-full object-cover"
                   />

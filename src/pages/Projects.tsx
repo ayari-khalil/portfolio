@@ -170,9 +170,11 @@ const Projects: React.FC = () => {
                 <div className="absolute top-4 right-4">
                   <a 
                     href={project.githubUrl}
+                    // href="https://github.com/ayari-khalil" 
+
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+                    className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300 pointer-events-auto"
                   >
                     <ExternalLink className="w-5 h-5 text-white" />
                   </a>
